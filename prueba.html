@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <title>Huellas de cariño</title>
+
+  <!-- slider stylesheet -->
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" />
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css?family=Dosis:400,500|Poppins:400,700&display=swap" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="css/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="css/responsive.css" rel="stylesheet" />
+</head>
+
+<body>
+  <div class="hero_area">
+    <!-- header section strats -->
+      <div class="container-fluid fixed-top">
+        <nav class="navbar navbar-expand-lg custom_nav-container">
+          <a class="navbar-brand" href="index.html">
+            <img src="images/logo1.png" alt="">
+            <span>
+             Clinica Veterinaria
+            </span>
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="d-flex mx-auto flex-column flex-lg-row align-items-center">
+              <ul class="navbar-nav  ">
+                <li class="nav-item active">
+                  <a class="nav-link" href="#Inicio">Inicio</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#Nosotros">Nosotros </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#Servicio">Servicios </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#Galeria"> Galeria</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#Contacto">Contacto</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" data-toggle="modal" data-target="#Login-in">Ingresa </a>
+                </li>
+                <li class="nav-item mx-0 mx-lg-1">
+                  <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" data-toggle="modal" data-target="#Sing-up">Registrarse</a>
+              </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+
+
+      <!--<nav class="navbar navbar-expand-lg bg-secondary fixed-top text-uppercase" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand js-scroll-trigger" href="#page-top"><img src="img/OMC.png" alt=""></img></a>
+            <button class="navbar-toggler navbar-toggler-right text-uppercase bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                Menu
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    </li>
+                    <li class="nav-item mx-0 mx-lg-1">
+                        <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" data-toggle="modal" data-target="#Login-in">Ingresar</a>
+                    </li>
+                    <li class="nav-item mx-0 mx-lg-1">
+                        <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" data-toggle="modal" data-target="#Sing-up">Registrarse</a>
+                    </li>
+                    <li class="nav-item mx-0 mx-lg-1">
+                        <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="index_1.xhtml">EN</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!--Start Modal loggin & Sing up -->
+
+    <!-- Modal loggin -->
+
+
+
+    <div class="modal fade" id="Login-in" tabindex="-1" role="dialog" aria-labelledby="Login-inLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="Login-inLabel">Ingresar</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+
+
+                    <h:form class="needs-validation" novalidate="true" action="usuarioControlador">
+
+
+                        <f:view>
+
+                            <div class="form-group">
+                                <label for="validationDefault01">Correo</label>
+                                <h:inputText class="form-control" type="email" id="txtCorreo" value="#{usuarioControlador.usuario.correo}">
+
+                                </h:inputText>
+                            </div>
+
+                            <label for="exampleInputPassword1">Id</label>
+
+                            <h:inputSecret type="Password" class="form-control" id="validationCustom01"  placeholder="Password"  required="true" value="#{usuarioControlador.usuario.contrasenia}">
+
+                            </h:inputSecret>
+
+                        </f:view>
+                        <div class="modal-footer">
+
+                            <h:commandButton  action="#{usuarioControlador.validarLogin()}" value="Login"></h:commandButton>
+                        </div>
+                    </h:form>
+
+                </div>
+
+                <!--  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>-->
+                <!--  <button type="button" class="btn btn-primary">Save changes</button>-->
+            </div>
+        </div>
+    </div>
+
+
+    <!-- end header section -->
+    <!-- slider section -->
+    <section class="slider_section position-relative">
+      <div id="Inicio" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-md-4 offset-md-2">
+                  <div class="slider_detail-box">
+                    <h1>
+                      Professional
+                      <span>
+                        Care Your Pet
+                      </span>
+                    </h1>
+                    <p>
+                      Lorem Ipsum is simply dummy text of the printing and
+                      typesetting industry.
+                      Lorem Ipsum has been the industry's standard dummy text ever
+                    </p>
+                    <div class="btn-box">
+                      <a href="" class="btn-1">
+                        Buy now
+                      </a>
+                      <a href="" class="btn-2">
+                        Contact
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="slider_img-box">
+                    <img src="images/slider-img.png" style="height: 500px;" alt="">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-md-4 offset-md-2">
+                  <div class="slider_detail-box">
+                    <h1>
+                      Professional
+                      <span>
+                        Care Your Pet
+                      </span>
+                    </h1>
+                    <p>
+                      Lorem Ipsum is simply dummy text of the printing and
+                      typesetting industry.
+                      Lorem Ipsum has been the industry's standard dummy text ever
+                    </p>
+                    <div class="btn-box">
+                      <a href="" class="btn-1">
+                        Buy now
+                      </a>
+                      <a href="" class="btn-2">
+                        Contact
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="slider_img-box">
+                    <img src="images/slider-img.png" alt="">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+    <!-- end slider section -->
+  </div>
+
+  <!--Quienes somos nosotros-->
+
+  <section id="Nosotros" class="about_section layout_padding">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="img-box">
+            <img src="images/carrusel2.2.png" alt="">
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="detail-box">
+            <h2 class="custom_heading">
+              ¿Quiénes <span>somos</span> nosotros?
+            </h2>
+            <p>
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+              industry's standard dummy text ever since theLorem Ipsum is simply dummy text of the printing and
+              typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the
+            </p>
+            <div>
+              <a href="">
+                About More
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Nuestros servicios -->
+  <section id="Servicio" class="service_section layout_padding">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-6 offset-md-2">
+          <h2 class="custom_heading">
+            Nuestos <span>servicios</span>
+          </h2>
+          <div class="container layout_padding2">
+            <div class="row">
+              <div class="col-md-4">
+                <div class="img_box">
+                  <img src="images/s-1.png" alt="">
+                </div>
+                <div class="detail_box">
+                  <h6>
+                    Pet Care
+                  </h6>
+                  <p>
+                    onsectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                    enim ad minim veniam, quis nostrud exe
+                  </p>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="img_box">
+                  <img src="images/s-2.png" alt="">
+                </div>
+                <div class="detail_box">
+                  <h6>
+                    Pet Hotel
+                  </h6>
+                  <p>
+                    onsectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                    enim ad minim veniam, quis nostrud exe
+                  </p>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="img_box">
+                  <img src="images/s-3.png" alt="">
+                </div>
+                <div class="detail_box">
+                  <h6>
+                    Emergency
+                  </h6>
+                  <p>
+                    onsectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                    enim ad minim veniam, quis nostrud exe
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <a href="">
+              Read More
+            </a>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <img src="images/slider-img1.jpg" style="height: 500px;" alt="" class="w-100">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end service section -->
+
+
+
+  <!-- gallery section -->
+  <section id="Galeria" class="gallery-section layout_padding">
+    <div class="container">
+      <h2>
+        Galería
+      </h2>
+    </div>
+    <div class="container ">
+      <div class="img_box box-1">
+        <img src="images/galeria1.jpg" style="height: 350px;" alt="">
+      </div>
+      <div class="img_box box-2">
+        <img src="images/galeria2.jpg" style="height: 350px;" alt="">
+      </div>
+      <div class="img_box box-3">
+        <img src="images/galeria3.jpg" style="height: 300px;" alt="">
+      </div>
+      <div class="img_box box-4">
+        <img src="images/galeria4.jpg" style="height: 300px;" alt="">
+      </div>
+      <div class="img_box box-5">
+        <img src="images/galeria5.jpg" style="height: 300px;" alt="">
+      </div>
+    </div>
+  </section>
+  <!-- end gallery section -->
+
+
+  <!-- footer section -->
+  <section id="Contacto" class="container-fluid footer_section">
+    <p>
+      &copy; 2024 Todos los derechos reservados - Julian Urrego y Maria Paula ramírez - Colegio OEA  </p>
+  </section>
+  <!-- footer section -->
+
+  <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.js"></script>
+
+  <!-- google map js -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8eaHt9Dh5H57Zh0xVTqxVdBFCvFMqFjQ&callback=initMap">
+  </script>
+  <!-- end google map js -->
+</body>
+</body>
+
+</html> 
