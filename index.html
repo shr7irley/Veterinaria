@@ -31,7 +31,8 @@
 
 <body>
   <div class="hero_area">
-    <!-- header section strats -->
+
+    <!-- El siguiente menu hace parte del menu, es realizazo con navar -->
     <header class="header_section fixed-top">
       <div class="container-fluid">
         <nav class="navbar navbar-expand-lg custom_nav-container">
@@ -65,26 +66,113 @@
                   <a class="nav-link" href="#Contacto">Contacto</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="buy.html"> Registro </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="buy.html"> Login </a>
-                </li>
+                  <a class="nav-link" data-toggle="modal" data-target="#Login-in">Ingresar</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-toggle="modal" data-target="#Sing-up">Registrarse</a>
+            </li>
               </ul>
-
+              </div>
           </div>
         </nav>
+        
       </div>
+      
     </header>
-    <!-- end header section -->
-    <!-- slider section -->
+    <!-- Esta es el ventana emergente cuando se da clic en ingresar  -->
+    <div class="modal fade" id="Login-in" tabindex="-1" role="dialog" aria-labelledby="Login-inLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <h5 class="modal-title" id="Login-inLabel">Ingresar</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                  </button>
+              </div>
+              <div class="modal-body">
+                  <form class="needs-validation" novalidate="true">
+                          <div class="form-group">
+                              <label for="validationDefault01">Correo</label>
+                              <input class="form-control" type="email" id="txtCorreo">
+                              </input>
+
+                          </div>
+
+                          <label for="exampleInputPassword1">Contraseña</label>
+
+                          <input type="Password" class="form-control" id="validationCustom01"  placeholder=""  required="true" value="">
+
+                          </input>
+
+                      <div class="modal-footer">
+                        <button type="submit" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-block">Login</button>
+                      </div>
+                  </form>
+              </div>
+          </div>
+      </div>
+  </div><!-- Aqui termina el modola del login  -->
+
+  <!-- Aquí va el formulario del registro -->
+<button type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary" data-mdb-modal-init data-mdb-target="#Sing-up">
+  Launch modal register form
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="Sing-up" tabindex="-1" aria-labelledby="exampleModalLabel2" aria-hidden="true">
+  <div class="modal-dialog d-flex justify-content-center">
+      <div class="modal-content w-75">
+          <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel2">Registro</h5>
+              <button type="button" data-mdb-button-init data-mdb-ripple-init class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body p-4">
+              <form>
+                  <!-- Name input -->
+                  <div data-mdb-input-init class="form-outline mb-4">
+                    <label for="validationDefault01">Name</label>
+                    <input class="form-control" type="email" id="txtCorreo">
+                    </input>
+                </div>
+
+                  <!-- Email input -->
+                  <div data-mdb-input-init class="form-outline mb-4">
+                    <input type="email" id="email2" class="form-control" />
+                    <label class="form-label" for="email2">Email address</label>
+                </div>
+
+                <label for="validationDefault01">Nombre completo</label>
+                                <div class="form-group">
+                                    <div class="form-row">
+                                        <div class="col">
+                                            <h:inputText class="form-control" id="nombre" value="#{usuarioControlador.usuario.nombre}" title="Nombre" required="true" requiredMessage="The Nombre field is required."/>
+                                        </div>
+                                        <div class="col">
+                                            <h:inputText class="form-control" id="apellido" value="#{usuarioControlador.usuario.apellido}" title="Apellido" required="true" requiredMessage="The Apellido field is required."/> 
+                                        </div>  
+                                    </div>
+                                </div>
+
+                  <!-- password input -->
+                  <div data-mdb-input-init class="form-outline mb-4">
+                      <input type="password" id="password2" class="form-control" />
+                      <label class="form-label" for="password2">Password</label>
+                  </div>
+
+                  <!-- Submit button -->
+                  <button type="submit" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-block">Sign up</button>
+              </form>
+          </div>
+      </div>
+  </div>
+</div>
+<!-- Modal -->
+    <!-- Aquí es la seccion del carrusel de imagen -->
     <section class="slider_section position-relative">
       <div id="Inicio" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
           <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
           <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
         </ol>
         <div class="carousel-inner">
           <div class="carousel-item active">
@@ -161,12 +249,11 @@
       </div>
 
     </section>
-    <!-- end slider section -->
+    <!-- Termina la seccion del carrusel -->
   </div>
 
   <!--Quienes somos nosotros-->
-
-  <section id="Nosotros" class="about_section layout_padding">
+<section id="Nosotros" class="about_section layout_padding">
     <div class="container">
       <div class="row">
         <div class="col-md-6">
@@ -260,13 +347,11 @@
         </div>
       </div>
     </div>
-  </section>
-
-  <!-- end service section -->
+  </section> <!-- Termina la seccion de los servicios -->
 
 
 
-  <!-- gallery section -->
+  <!-- Esta es la seccion de la galería -->
   <section id="Galeria" class="gallery-section layout_padding">
     <div class="container">
       <h2>
@@ -291,15 +376,15 @@
       </div>
     </div>
   </section>
-  <!-- end gallery section -->
+  <!-- Terminamos la seccion de la galería -->
 
 
-  <!-- footer section -->
+  <!-- Aqui va la sección del pie de pagina -->
   <section id="Contacto" class="container-fluid footer_section">
     <p>
       &copy; 2024 Todos los derechos reservados - Julian Urrego y Maria Paula ramírez - Colegio OEA  </p>
   </section>
-  <!-- footer section -->
+  <!-- Aqui termina la seccion de la pagina -->
 
   <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
   <script type="text/javascript" src="js/bootstrap.js"></script>
