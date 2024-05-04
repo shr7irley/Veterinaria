@@ -84,7 +84,7 @@
       <div class="modal-dialog" role="document">
           <div class="modal-content">
               <div class="modal-header">
-                  <h5 class="modal-title" id="Login-inLabel">Ingresar</h5>
+                  <h5 class="modal-title" id="Login-inLabel">Formulario de ingreso</h5>
                   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                       <span aria-hidden="true">&times;</span>
                   </button>
@@ -99,75 +99,80 @@
                           </div>
 
                           <label for="exampleInputPassword1">Contraseña</label>
-
                           <input type="Password" class="form-control" id="validationCustom01"  placeholder=""  required="true" value="">
 
                           </input>
 
                       <div class="modal-footer">
-                        <button type="submit" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-block">Login</button>
+                        <button type="submit" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-block">Entrar</button>
                       </div>
                   </form>
               </div>
           </div>
       </div>
-  </div><!-- Aqui termina el modola del login  -->
+  </div><!-- Aqui termina el modal del login  -->
 
   <!-- Aquí va el formulario del registro -->
-<button type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary" data-mdb-modal-init data-mdb-target="#Sing-up">
-  Launch modal register form
-</button>
-
-<!-- Modal -->
 <div class="modal fade" id="Sing-up" tabindex="-1" aria-labelledby="exampleModalLabel2" aria-hidden="true">
   <div class="modal-dialog d-flex justify-content-center">
       <div class="modal-content w-75">
           <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel2">Registro</h5>
-              <button type="button" data-mdb-button-init data-mdb-ripple-init class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
+              <h5 class="modal-title" id="exampleModalLabel2">Formulario de registro</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
           </div>
           <div class="modal-body p-4">
               <form>
-                  <!-- Name input -->
+                  <!-- Registrar Nombre -->
                   <div data-mdb-input-init class="form-outline mb-4">
-                    <label for="validationDefault01">Name</label>
-                    <input class="form-control" type="email" id="txtCorreo">
-                    </input>
-                </div>
-
-                  <!-- Email input -->
-                  <div data-mdb-input-init class="form-outline mb-4">
-                    <input type="email" id="email2" class="form-control" />
-                    <label class="form-label" for="email2">Email address</label>
-                </div>
-
-                <label for="validationDefault01">Nombre completo</label>
-                                <div class="form-group">
-                                    <div class="form-row">
-                                        <div class="col">
-                                            <h:inputText class="form-control" id="nombre" value="#{usuarioControlador.usuario.nombre}" title="Nombre" required="true" requiredMessage="The Nombre field is required."/>
-                                        </div>
-                                        <div class="col">
-                                            <h:inputText class="form-control" id="apellido" value="#{usuarioControlador.usuario.apellido}" title="Apellido" required="true" requiredMessage="The Apellido field is required."/> 
-                                        </div>  
-                                    </div>
-                                </div>
-
-                  <!-- password input -->
-                  <div data-mdb-input-init class="form-outline mb-4">
-                      <input type="password" id="password2" class="form-control" />
-                      <label class="form-label" for="password2">Password</label>
+                    <label class="form-label" for="nombre">Nombre</label>
+                      <input type="text" id="nombre" class="form-control" />
                   </div>
 
-                  <!-- Submit button -->
-                  <button type="submit" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-block">Sign up</button>
+                  <!-- Registrar Apellido -->
+                  <div data-mdb-input-init class="form-outline mb-4">
+                    <label class="form-label" for="apellido">Apellido</label>
+                      <input type="email" id="apellido" class="form-control" />
+                  </div>
+
+                  <!-- Registrar Correo -->
+                  <div data-mdb-input-init class="form-outline mb-4">
+                    <label class="form-label" for="correo">Correo</label>
+                      <input type="email" id="correo" class="form-control" />
+                  </div>
+
+                  <!-- Registrar Edad -->
+                  <div class="form-row">
+                    <label for="validationDefault01">Edad</label>
+                      <div class="col-3">
+                          <input class="form-control" value="" title="" required="true" requiredMessage=""></input>
+
+                      </div>
+                  <!-- Registrar Telefono -->
+                      <label for="validationDefault01">Tefélono</label>
+                      <div class="col-5"> 
+                          <input class="form-control" value="" title="" required="true" requiredMessage=""></input>
+
+                      </div>
+                  </div>
+
+                  <!-- Registrar contraseña -->
+                  <div data-mdb-input-init class="form-outline mb-4">
+                    <label class="form-label" for="password">Contraseña</label>
+                      <input type="email" id="password" class="form-control" />
+                  </div>
+                  
+                  
+                  <button type="submit" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-block">Registrarse</button>
               </form>
           </div>
       </div>
   </div>
 </div>
 <!-- Modal -->
-    <!-- Aquí es la seccion del carrusel de imagen -->
+
+<!-- Aquí es la seccion del carrusel de imagen -->
     <section class="slider_section position-relative">
       <div id="Inicio" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
